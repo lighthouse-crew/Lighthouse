@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SigninSignupViewController: UIViewController, UITextFieldDelegate {
     
@@ -45,8 +46,77 @@ class SigninSignupViewController: UIViewController, UITextFieldDelegate {
         return UIInterfaceOrientationMask.Portrait;
     }
     
-    @IBAction func actionButtonPressed(sender: AnyObject) {
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertView()
+        alert.title = title
+        alert.message = message
+        alert.addButtonWithTitle("OK")
+        alert.show()
+    }
+    
+    func showNetworkErrorAlert() {
+        showAlert("Network Error", message: "Please try again later. ")
+    }
+    
+    func processSignin() {
+        actionButton.setTitle("Signing in...", forState: .Normal)
         
+        Alamofire.request(.POST, engineURL + "/users/signin", parameters: [
+            "username": usernameField.text!,
+            "password": passwordField.text!
+        ]).responseJSON { (_, _, result) -> Void in
+            if (!result.isSuccess) {
+                self.showNetworkErrorAlert()
+            } else {
+                let value = result.value!
+                
+                if (value["success"] as! Int == 1) {
+                    DataStore.sharedStore.token = (value["token"] as! String)
+//                    TODO: redirect to the actual pages
+                } else {
+                    self.showAlert("Errors", message: "Incorrect username or password. ")
+                }
+            }
+            
+            self.actionButton.setTitle("Sign In", forState: .Normal)
+            self.actionButton.enabled = true
+        }
+    }
+    
+    func processSignup() {
+        actionButton.setTitle("Signing up...", forState: .Normal)
+        
+        Alamofire.request(.POST, engineURL + "/users/signup", parameters: [
+            "name": nameField.text!,
+            "username": usernameField.text!,
+            "password": passwordField.text!
+        ]).responseJSON(completionHandler: { (_, _, result) -> Void in
+            if (!result.isSuccess) {
+                self.showNetworkErrorAlert()
+            } else {
+                let value = result.value!
+                
+                if (value["success"] as! Int == 1) {
+                    self.processSignin()
+                    return
+                } else {
+                    self.showAlert("Errors", message: (value["errors"] as! [String]).joinWithSeparator("\n"))
+                }
+            }
+            
+            self.actionButton.setTitle("Sign Up", forState: .Normal)
+            self.actionButton.enabled = true
+        })
+    }
+    
+    @IBAction func actionButtonPressed(sender: AnyObject) {
+        actionButton.enabled = false
+        
+        if (isSignin) {
+            self.processSignin()
+        } else {
+            self.processSignup()
+        }
     }
     
     @IBAction func switchButtonPressed(sender: AnyObject) {
