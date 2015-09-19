@@ -34,12 +34,16 @@ class SigninSignupViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if (DataStore.sharedStore.token != nil) {
+            self.showWelcomeViewController()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
@@ -58,6 +62,12 @@ class SigninSignupViewController: UIViewController, UITextFieldDelegate {
         showAlert("Network Error", message: "Please try again later. ")
     }
     
+    func showWelcomeViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("welcome")
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
     func processSignin() {
         actionButton.setTitle("Signing in...", forState: .Normal)
         
@@ -72,7 +82,7 @@ class SigninSignupViewController: UIViewController, UITextFieldDelegate {
                 
                 if (value["success"] as! Int == 1) {
                     DataStore.sharedStore.token = (value["token"] as! String)
-//                    TODO: redirect to the actual pages
+                    self.showWelcomeViewController()
                 } else {
                     self.showAlert("Errors", message: "Incorrect username or password. ")
                 }

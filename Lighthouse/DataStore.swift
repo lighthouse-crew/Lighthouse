@@ -13,10 +13,11 @@ class DataStore {
     
     let tokenDefaultsKey = "token"
     
-    var token : String {
+    var token : String? {
         get {
             let defaults = NSUserDefaults.standardUserDefaults()
-            return (defaults.objectForKey(tokenDefaultsKey) as! String)
+            let token = defaults.objectForKey(tokenDefaultsKey)
+            return (token == nil ? nil : (token as! String))
         }
         
         set {

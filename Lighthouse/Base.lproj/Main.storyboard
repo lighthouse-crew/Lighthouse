@@ -24,7 +24,7 @@
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldDone:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="SHD-Eg-n58"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="KXd-cQ-smr"/>
@@ -34,7 +34,7 @@
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="textFieldDone:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="lQS-VV-NG7"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Mdh-Lp-yOF"/>
@@ -60,7 +60,7 @@
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textFieldDone:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="srq-oX-Nmp"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RCM-2H-Rx8"/>
@@ -210,6 +210,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="519" y="400"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="ajS-at-BYc">
+            <objects>
+                <viewController storyboardIdentifier="welcome" id="yLW-LT-hvE" customClass="WelcomeViewController" customModule="Lighthouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IAw-dD-Ovl"/>
+                        <viewControllerLayoutGuide type="bottom" id="NPo-g8-y3j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CgW-WO-KsB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wJg-KP-GEe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wJg-KP-GEe" secondAttribute="height" multiplier="1:1" id="5sL-IT-9yg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5sL-IT-9yg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5sL-IT-9yg"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wJg-KP-GEe" firstAttribute="width" secondItem="CgW-WO-KsB" secondAttribute="width" id="iBF-l5-dHP"/>
+                            <constraint firstItem="wJg-KP-GEe" firstAttribute="centerX" secondItem="CgW-WO-KsB" secondAttribute="centerX" id="nPe-VG-Y1u"/>
+                            <constraint firstItem="wJg-KP-GEe" firstAttribute="centerY" secondItem="NPo-g8-y3j" secondAttribute="top" multiplier="0.5" id="sT0-9B-TZN">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wJg-KP-GEe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="iBF-l5-dHP"/>
+                                <exclude reference="nPe-VG-Y1u"/>
+                                <exclude reference="sT0-9B-TZN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wJg-KP-GEe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="iBF-l5-dHP"/>
+                                <include reference="nPe-VG-Y1u"/>
+                                <include reference="sT0-9B-TZN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9W-5f-Qo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258.5" y="400"/>
         </scene>
     </scenes>
     <resources>

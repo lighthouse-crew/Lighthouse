@@ -15,6 +15,7 @@
 		15B7F47F1BADDD0900212483 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B7F47E1BADDD0900212483 /* Logo.png */; settings = {ASSET_TAGS = (); }; };
 		15EADD511BADE04600B81468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD501BADE04600B81468 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		15EADD531BADEBF600B81468 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD521BADEBF600B81468 /* DataStore.swift */; settings = {ASSET_TAGS = (); }; };
+		15EADD551BADF0CE00B81468 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD541BADF0CE00B81468 /* WelcomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		32EAF92BA2D8BB7E3D1D331C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113A7396B6CC1EDFD7564BA1 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -22,14 +23,15 @@
 		113A7396B6CC1EDFD7564BA1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1577056B1BADB983007BADDD /* Lighthouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighthouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1577056E1BADB983007BADDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		157705701BADB983007BADDD /* SigninSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignupViewController.swift; sourceTree = "<group>"; };
+		157705701BADB983007BADDD /* SigninSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SigninSignupViewController.swift; path = ../SigninSignupViewController.swift; sourceTree = "<group>"; };
 		157705731BADB983007BADDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		157705751BADB983007BADDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		157705751BADB983007BADDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		157705781BADB983007BADDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1577057A1BADB983007BADDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15B7F47E1BADDD0900212483 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		15EADD501BADE04600B81468 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15EADD521BADEBF600B81468 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		15EADD541BADF0CE00B81468 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = ../WelcomeViewController.swift; sourceTree = "<group>"; };
 		9E1C105476D2ECA8A1C9B0A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E598F1E1EF273A98FA895508 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,15 +69,11 @@
 		1577056D1BADB983007BADDD /* Lighthouse */ = {
 			isa = PBXGroup;
 			children = (
+				15EADD581BADF12300B81468 /* Support Files */,
+				15EADD571BADF11C00B81468 /* Model */,
+				15EADD561BADF0EB00B81468 /* UI */,
 				15B7F47D1BADDCDB00212483 /* Resources */,
-				1577056E1BADB983007BADDD /* AppDelegate.swift */,
-				157705701BADB983007BADDD /* SigninSignupViewController.swift */,
-				157705721BADB983007BADDD /* Main.storyboard */,
-				157705751BADB983007BADDD /* Assets.xcassets */,
-				157705771BADB983007BADDD /* LaunchScreen.storyboard */,
 				1577057A1BADB983007BADDD /* Info.plist */,
-				15EADD501BADE04600B81468 /* Constants.swift */,
-				15EADD521BADEBF600B81468 /* DataStore.swift */,
 			);
 			path = Lighthouse;
 			sourceTree = "<group>";
@@ -86,6 +84,36 @@
 				15B7F47E1BADDD0900212483 /* Logo.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		15EADD561BADF0EB00B81468 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				157705701BADB983007BADDD /* SigninSignupViewController.swift */,
+				15EADD541BADF0CE00B81468 /* WelcomeViewController.swift */,
+				157705721BADB983007BADDD /* Main.storyboard */,
+				157705751BADB983007BADDD /* Assets.xcassets */,
+				157705771BADB983007BADDD /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15EADD571BADF11C00B81468 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				15EADD521BADEBF600B81468 /* DataStore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		15EADD581BADF12300B81468 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1577056E1BADB983007BADDD /* AppDelegate.swift */,
+				15EADD501BADE04600B81468 /* Constants.swift */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 		4041BE85255A5E0D3CA77A57 /* Frameworks */ = {
@@ -229,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				157705711BADB983007BADDD /* SigninSignupViewController.swift in Sources */,
+				15EADD551BADF0CE00B81468 /* WelcomeViewController.swift in Sources */,
 				15EADD531BADEBF600B81468 /* DataStore.swift in Sources */,
 				1577056F1BADB983007BADDD /* AppDelegate.swift in Sources */,
 				15EADD511BADE04600B81468 /* Constants.swift in Sources */,
@@ -244,6 +273,7 @@
 				157705731BADB983007BADDD /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		157705771BADB983007BADDD /* LaunchScreen.storyboard */ = {
@@ -252,6 +282,7 @@
 				157705781BADB983007BADDD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -347,7 +378,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Lighthouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.ljh.Lighthouse;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ljh.LighthouseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -362,7 +393,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Lighthouse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.ljh.Lighthouse;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ljh.LighthouseApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
