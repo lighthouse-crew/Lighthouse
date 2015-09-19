@@ -20,6 +20,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDh-Th-aDh">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="textFieldDone:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="SHD-Eg-n58"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KXd-cQ-smr"/>
+                                </connections>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ph2-2G-Tpf">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
@@ -46,19 +56,6 @@
                                     <action selector="switchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OA3-b7-c8w"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-B0-jNO">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="8XR-B0-jNO" secondAttribute="height" multiplier="1:1" id="j6j-Fd-WQX"/>
-                                </constraints>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="j6j-Fd-WQX"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-FP-H3L">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <animations/>
@@ -69,16 +66,18 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RCM-2H-Rx8"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDh-Th-aDh">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-B0-jNO">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="textFieldDone:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="SHD-Eg-n58"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KXd-cQ-smr"/>
-                                </connections>
-                            </textField>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8XR-B0-jNO" secondAttribute="height" multiplier="1:1" id="j6j-Fd-WQX"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="j6j-Fd-WQX"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -115,7 +114,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="aDh-Th-aDh" secondAttribute="trailing" constant="48" id="mb2-bh-1Dg"/>
                             <constraint firstItem="Si9-8i-UpM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="mo6-5h-Ixt"/>
                             <constraint firstItem="gTu-FP-H3L" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="pxF-rI-dWJ"/>
-                            <constraint firstItem="8XR-B0-jNO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="rlg-pa-yPz"/>
+                            <constraint firstItem="8XR-B0-jNO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="rlg-pa-yPz"/>
                             <constraint firstItem="Si9-8i-UpM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ryw-g5-gp2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ph2-2G-Tpf" secondAttribute="trailing" constant="48" id="sEo-y0-9Jy"/>
                             <constraint firstItem="8XR-B0-jNO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tUi-YX-rLr"/>
@@ -123,12 +122,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="aDh-Th-aDh"/>
                                 <exclude reference="Ph2-2G-Tpf"/>
                                 <exclude reference="Z0t-cM-Chs"/>
                                 <exclude reference="Si9-8i-UpM"/>
-                                <exclude reference="8XR-B0-jNO"/>
                                 <exclude reference="gTu-FP-H3L"/>
-                                <exclude reference="aDh-Th-aDh"/>
+                                <exclude reference="8XR-B0-jNO"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="39y-hT-Cd0"/>
@@ -159,12 +158,12 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="aDh-Th-aDh"/>
                                 <include reference="Ph2-2G-Tpf"/>
                                 <include reference="Z0t-cM-Chs"/>
                                 <include reference="Si9-8i-UpM"/>
-                                <include reference="8XR-B0-jNO"/>
                                 <include reference="gTu-FP-H3L"/>
-                                <include reference="aDh-Th-aDh"/>
+                                <include reference="8XR-B0-jNO"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="39y-hT-Cd0"/>
@@ -213,4 +212,7 @@
             <point key="canvasLocation" x="519" y="400"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo.png" width="1024" height="1024"/>
+    </resources>
 </document>
