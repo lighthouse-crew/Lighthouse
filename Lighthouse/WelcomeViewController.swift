@@ -11,4 +11,11 @@ import UIKit
 
 class WelcomeViewController : UIViewController {
     
+    @IBAction func showSidebar(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sidebarViewController = storyboard.instantiateViewControllerWithIdentifier("sidebar")
+        sidebarViewController.modalPresentationStyle = .OverCurrentContext
+        
+        self.presentViewController(sidebarViewController, animated: false, completion: nil)
+    }
 }
