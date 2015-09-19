@@ -250,15 +250,14 @@
                                     <constraint firstAttribute="height" constant="30" id="DEJ-Qg-Kbe"/>
                                     <constraint firstAttribute="width" constant="53" id="nPf-jI-qxW"/>
                                 </constraints>
-                                <state key="normal" image="bars_b2b2b2_32.png"/>
+                                <state key="normal" image="Bars.png"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="DEJ-Qg-Kbe"/>
                                         <exclude reference="nPf-jI-qxW"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="-17" y="3" width="127" height="64"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="DEJ-Qg-Kbe"/>
                                         <include reference="nPf-jI-qxW"/>
@@ -273,6 +272,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CUY-pf-2Jt" firstAttribute="top" secondItem="IAw-dD-Ovl" secondAttribute="bottom" id="5H8-jb-VSK"/>
+                            <constraint firstItem="CUY-pf-2Jt" firstAttribute="leading" secondItem="CgW-WO-KsB" secondAttribute="leadingMargin" id="E9I-mZ-Pfk"/>
+                            <constraint firstItem="CUY-pf-2Jt" firstAttribute="top" secondItem="IAw-dD-Ovl" secondAttribute="bottom" id="NXZ-ya-qT3"/>
+                            <constraint firstItem="CUY-pf-2Jt" firstAttribute="top" secondItem="IAw-dD-Ovl" secondAttribute="bottom" constant="8" id="Tgc-c8-nRq"/>
+                            <constraint firstItem="CUY-pf-2Jt" firstAttribute="leading" secondItem="CgW-WO-KsB" secondAttribute="leadingMargin" id="Usf-Mj-R8h"/>
                             <constraint firstItem="CUY-pf-2Jt" firstAttribute="leading" secondItem="CgW-WO-KsB" secondAttribute="leadingMargin" id="WA8-5i-RHn"/>
                             <constraint firstItem="wJg-KP-GEe" firstAttribute="width" secondItem="CgW-WO-KsB" secondAttribute="width" id="iBF-l5-dHP"/>
                             <constraint firstItem="wJg-KP-GEe" firstAttribute="centerX" secondItem="CgW-WO-KsB" secondAttribute="centerX" id="nPe-VG-Y1u"/>
@@ -287,6 +290,10 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5H8-jb-VSK"/>
+                                <exclude reference="E9I-mZ-Pfk"/>
+                                <exclude reference="NXZ-ya-qT3"/>
+                                <exclude reference="Tgc-c8-nRq"/>
+                                <exclude reference="Usf-Mj-R8h"/>
                                 <exclude reference="WA8-5i-RHn"/>
                                 <exclude reference="iBF-l5-dHP"/>
                                 <exclude reference="nPe-VG-Y1u"/>
@@ -299,8 +306,12 @@
                                 <include reference="CUY-pf-2Jt"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5H8-jb-VSK"/>
-                                <include reference="WA8-5i-RHn"/>
+                                <exclude reference="5H8-jb-VSK"/>
+                                <exclude reference="E9I-mZ-Pfk"/>
+                                <exclude reference="NXZ-ya-qT3"/>
+                                <include reference="Tgc-c8-nRq"/>
+                                <include reference="Usf-Mj-R8h"/>
+                                <exclude reference="WA8-5i-RHn"/>
                                 <include reference="iBF-l5-dHP"/>
                                 <include reference="nPe-VG-Y1u"/>
                                 <include reference="sT0-9B-TZN"/>
@@ -405,7 +416,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Bars.png" width="32" height="32"/>
         <image name="Logo.png" width="1024" height="1024"/>
-        <image name="bars_b2b2b2_32.png" width="32" height="32"/>
     </resources>
 </document>
