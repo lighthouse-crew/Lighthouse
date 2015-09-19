@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -240,21 +240,25 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUY-pf-2Jt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUY-pf-2Jt">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="DEJ-Qg-Kbe"/>
                                     <constraint firstAttribute="width" constant="53" id="nPf-jI-qxW"/>
                                 </constraints>
-                                <state key="normal" title="Sidebar"/>
+                                <state key="normal" image="bars_b2b2b2_32.png"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="DEJ-Qg-Kbe"/>
                                         <exclude reference="nPf-jI-qxW"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="-17" y="3" width="127" height="64"/>
                                     <mask key="constraints">
                                         <include reference="DEJ-Qg-Kbe"/>
                                         <include reference="nPf-jI-qxW"/>
@@ -332,8 +336,7 @@
                                         <exclude reference="iEM-CG-AC6"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="20" width="132" height="580"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="iEM-CG-AC6"/>
                                     </mask>
@@ -342,9 +345,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7f-wv-xGF">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
-                                </variation>
                                 <connections>
                                     <action selector="dismissSidebar:" destination="Mz0-qL-QdN" eventType="touchUpInside" id="oDT-8C-v2M"/>
                                 </connections>
@@ -369,6 +369,8 @@
                                 <exclude reference="D7f-wv-xGF"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="CUb-eI-e07"/>
+                                <exclude reference="y5G-pb-Bf4"/>
                                 <exclude reference="Ffd-Wi-q9g"/>
                                 <exclude reference="Kx3-ZS-T9V"/>
                                 <exclude reference="bVs-eg-Syh"/>
@@ -376,8 +378,6 @@
                                 <exclude reference="6zY-OB-tYV"/>
                                 <exclude reference="KrG-kf-9VL"/>
                                 <exclude reference="RcW-PT-Nep"/>
-                                <exclude reference="CUb-eI-e07"/>
-                                <exclude reference="y5G-pb-Bf4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -386,6 +386,8 @@
                                 <include reference="D7f-wv-xGF"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="CUb-eI-e07"/>
+                                <include reference="y5G-pb-Bf4"/>
                                 <include reference="Ffd-Wi-q9g"/>
                                 <include reference="Kx3-ZS-T9V"/>
                                 <include reference="bVs-eg-Syh"/>
@@ -393,8 +395,6 @@
                                 <include reference="6zY-OB-tYV"/>
                                 <include reference="KrG-kf-9VL"/>
                                 <include reference="RcW-PT-Nep"/>
-                                <include reference="CUb-eI-e07"/>
-                                <include reference="y5G-pb-Bf4"/>
                             </mask>
                         </variation>
                     </view>
@@ -406,5 +406,6 @@
     </scenes>
     <resources>
         <image name="Logo.png" width="1024" height="1024"/>
+        <image name="bars_b2b2b2_32.png" width="32" height="32"/>
     </resources>
 </document>
