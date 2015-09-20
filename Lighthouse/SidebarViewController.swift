@@ -125,7 +125,8 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
             type = .LightHouse;
         }
         
-        groupCell.nameLabel!.text = groups![type]![indexPath.item]["name"] as! String;
+        groupCell.nameLabel!.text = groups![type]![indexPath.item]["name"] as! String
+        groupCell.lightView!.state = LightView.stateForInteger(groups![type]![indexPath.item]["my_state"] as! Int)
         
         return groupCell
     }

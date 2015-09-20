@@ -19,6 +19,19 @@ class LightView : UIView {
     
     var state : LightViewState
     
+    class func stateForInteger(integer : Int) -> LightViewState {
+        switch (integer) {
+        case 0:
+            return .Inactive
+        case 1:
+            return .Active
+        case 2:
+            return .InProgress
+        default:
+            return .Inactive
+        }
+    }
+    
     override init(frame: CGRect) {
         state = .Inactive
         super.init(frame: frame)

@@ -37,7 +37,6 @@ class GroupTableCell : UITableViewCell {
     }
     
     override func layoutSubviews() {
-        NSLog("Relayouting happening")
         nameLabel!.frame = CGRectMake(0.3 * self.frame.width, 0, 0.7 * self.frame.width, self.frame.height)
         lightView!.frame = CGRectMake(0.25 * self.frame.width - self.frame.height, 0, self.frame.height, self.frame.height)
     }
