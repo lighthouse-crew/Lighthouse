@@ -179,6 +179,7 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
                 self.showNetworkErrorAlert()
             } else {
                 let value = result.value!
+                NSLog(String(value))
                 
                 if (value["success"] as! Int == 1) {
                     self.details = value["members"] as! [[String: AnyObject]]
@@ -283,7 +284,7 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
         var cell = tableView.dequeueReusableCellWithIdentifier("detail")
         
         if (cell == nil) {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: "detail")
+            cell = UITableViewCell(style: .Value1, reuseIdentifier: "detail")
         }
         
         let state = details![indexPath.item]["state"] as! Int
@@ -296,8 +297,12 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
         case .InProgress:
             cell!.imageView!.image = UIImage(named: "InProgress")
         }
-        
         cell!.textLabel!.text = details![indexPath.item]["user_name"] as! String
+        var label = details![indexPath.item]["label"] as? String
+        if (label == `nil) {
+            label = ""
+        }
+        cell!.detailTextLabel!.text = label
         
         return cell!
     }
