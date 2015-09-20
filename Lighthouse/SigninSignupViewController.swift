@@ -83,6 +83,7 @@ class SigninSignupViewController: UIViewController, UITextFieldDelegate {
                 if (value["success"] as! Int == 1) {
                     DataStore.sharedStore.token = (value["token"] as! String)
                     DataStore.sharedStore.name = (value["name"] as! String)
+                    DataStore.sharedStore.user_id = (value["uid"] as! Int)
                     self.showWelcomeViewController()
                 } else {
                     self.showAlert("Errors", message: "Incorrect username or password. ")

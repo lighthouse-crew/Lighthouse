@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 import Foundation
 
 class SidebarViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -18,11 +19,56 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
     var houseHeaderView : GroupTableHeaderView?
     var partyHeaderView : GroupTableHeaderView?
     
+    var groups : [LightGroupType: [AnyObject]]?;
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertView()
+        alert.title = title
+        alert.message = message
+        alert.addButtonWithTitle("OK")
+        alert.show()
+    }
+    
+    func showNetworkErrorAlert() {
+        showAlert("Network Error", message: "Please try again later. ")
+    }
+    
     override func viewDidLoad() {
         groupsTableView.delegate = self
         groupsTableView.dataSource = self
         
         nameLabel.text = DataStore.sharedStore.name!
+        
+        groups = [LightGroupType: [AnyObject]]()
+        groups![.LightHouse] = []
+        groups![.LightParty] = []
+        
+        Alamofire.request(.GET, engineURL + "/users/" + String(DataStore.sharedStore.user_id!) + "/light_groups", parameters: [
+            "token": DataStore.sharedStore.token!
+        ]).responseJSON { (_, _, result) -> Void in
+            if (!result.isSuccess) {
+                self.showNetworkErrorAlert();
+            } else {
+                let value = result.value! as! [String: AnyObject]
+                
+                if (value["success"] as! Int == 1) {
+                    self.groups![.LightHouse]!.removeAll()
+                    self.groups![.LightParty]!.removeAll()
+                
+                    for group in value["light_groups"] as! [AnyObject] {
+                        if (group["individual"] as! Bool) {
+                            self.groups![.LightHouse]!.append(group)
+                        } else {
+                            self.groups![.LightParty]!.append(group)
+                        }
+                    }
+                    
+                    self.groupsTableView!.reloadData()
+                } else {
+                    self.showAlert("Errors", message: "Error retrieving your light groups. ")
+                }
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -50,7 +96,14 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        switch (section) {
+        case 0:
+            return groups![.LightHouse]!.count;
+        case 1:
+            return groups![.LightParty]!.count;
+        default:
+            return 0;
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -61,14 +114,18 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
         }
         
         let groupCell = cell as! GroupTableCell
+        var type : LightGroupType;
         
-        if (indexPath.item == 0) {
-            groupCell.nameLabel!.text = "Wanna grab tea? "
-        } else if (indexPath.item == 1) {
-            groupCell.nameLabel!.text = "I have a car"
-        } else {
-            groupCell.nameLabel!.text = "A taste of 6.046"
+        switch (indexPath.section) {
+        case 0:
+            type = .LightHouse;
+        case 1:
+            type = .LightParty;
+        default:
+            type = .LightHouse;
         }
+        
+        groupCell.nameLabel!.text = groups![type]![indexPath.item]["name"] as! String;
         
         return groupCell
     }

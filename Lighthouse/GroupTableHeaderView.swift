@@ -24,10 +24,10 @@ class GroupTableHeaderView : UIView {
             switch (type) {
             case .LightHouse:
                 imageView!.image = UIImage(named: "Light House")
-                typeLabel!.text = "Light House"
+                typeLabel!.text = "Light Houses"
             case .LightParty:
                 imageView!.image = UIImage(named: "Light Party")
-                typeLabel!.text = "Light Party"
+                typeLabel!.text = "Light Parties"
             }
         }
     }
