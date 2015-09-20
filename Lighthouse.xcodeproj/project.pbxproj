@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150FDC7E1BAE23A0007CA639 /* GroupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC7D1BAE23A0007CA639 /* GroupTableCell.swift */; settings = {ASSET_TAGS = (); }; };
+		150FDC831BAE2F7A007CA639 /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC821BAE2F7A007CA639 /* LightView.swift */; settings = {ASSET_TAGS = (); }; };
 		1577056F1BADB983007BADDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1577056E1BADB983007BADDD /* AppDelegate.swift */; };
 		157705711BADB983007BADDD /* SigninSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157705701BADB983007BADDD /* SigninSignupViewController.swift */; };
 		157705741BADB983007BADDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157705721BADB983007BADDD /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		113A7396B6CC1EDFD7564BA1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		150FDC7D1BAE23A0007CA639 /* GroupTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableCell.swift; sourceTree = "<group>"; };
+		150FDC821BAE2F7A007CA639 /* LightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 		1577056B1BADB983007BADDD /* Lighthouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighthouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1577056E1BADB983007BADDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157705701BADB983007BADDD /* SigninSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignupViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				157705751BADB983007BADDD /* Assets.xcassets */,
 				157705771BADB983007BADDD /* LaunchScreen.storyboard */,
 				15EADD591BADF61E00B81468 /* SidebarViewController.swift */,
+				150FDC7D1BAE23A0007CA639 /* GroupTableCell.swift */,
+				150FDC821BAE2F7A007CA639 /* LightView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -263,9 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				157705711BADB983007BADDD /* SigninSignupViewController.swift in Sources */,
+				150FDC7E1BAE23A0007CA639 /* GroupTableCell.swift in Sources */,
 				15EADD5A1BADF61E00B81468 /* SidebarViewController.swift in Sources */,
 				15EADD551BADF0CE00B81468 /* WelcomeViewController.swift in Sources */,
 				15EADD531BADEBF600B81468 /* DataStore.swift in Sources */,
+				150FDC831BAE2F7A007CA639 /* LightView.swift in Sources */,
 				1577056F1BADB983007BADDD /* AppDelegate.swift in Sources */,
 				15EADD511BADE04600B81468 /* Constants.swift in Sources */,
 			);
@@ -289,8 +297,7 @@
 				157705781BADB983007BADDD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = /Users/nelsonliu/Documents/Github/Lighthouse/Lighthouse;
-			sourceTree = "<absolute>";
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 

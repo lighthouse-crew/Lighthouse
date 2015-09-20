@@ -9,7 +9,14 @@
 import UIKit
 import Foundation
 
-class SidebarViewController : UIViewController {
+class SidebarViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var groupsTableView: UITableView!
+    
+    override func viewDidLoad() {
+        groupsTableView.delegate = self
+        groupsTableView.dataSource = self
+    }
     
     override func viewWillAppear(animated: Bool) {
         let slidein = CATransition()
@@ -25,5 +32,33 @@ class SidebarViewController : UIViewController {
     
     @IBAction func dismissSidebar(sender: AnyObject) {
         self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+    // UITableViewDelegate
+    
+    // UITableViewDataSource
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("groupCell")
+        
+        if (cell == nil) {
+            cell = GroupTableCell(reuseIdentifier: "groupCell")
+        }
+        
+        let groupCell = cell as! GroupTableCell
+        
+        if (indexPath.item == 0) {
+            groupCell.nameLabel!.text = "Wanna grab tea? "
+        } else if (indexPath.item == 1) {
+            groupCell.nameLabel!.text = "I have a car"
+        } else {
+            groupCell.nameLabel!.text = "A taste of 6.046"
+        }
+        
+        return groupCell
     }
 }
