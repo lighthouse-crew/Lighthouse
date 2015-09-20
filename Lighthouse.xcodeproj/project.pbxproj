@@ -20,6 +20,9 @@
 		157D9A011BAE4DD800125D29 /* AddHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D99FF1BAE4DD800125D29 /* AddHouse.png */; settings = {ASSET_TAGS = (); }; };
 		157D9A021BAE4DD800125D29 /* AddParty.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A001BAE4DD800125D29 /* AddParty.png */; settings = {ASSET_TAGS = (); }; };
 		157D9A041BAE553F00125D29 /* Join.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A031BAE553F00125D29 /* Join.png */; settings = {ASSET_TAGS = (); }; };
+		157D9A0C1BAE795B00125D29 /* InProgress.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0B1BAE795B00125D29 /* InProgress.png */; settings = {ASSET_TAGS = (); }; };
+		157D9A0F1BAE79B800125D29 /* Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0D1BAE79B800125D29 /* Active.png */; settings = {ASSET_TAGS = (); }; };
+		157D9A101BAE79B800125D29 /* Inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0E1BAE79B800125D29 /* Inactive.png */; settings = {ASSET_TAGS = (); }; };
 		15B7F47F1BADDD0900212483 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B7F47E1BADDD0900212483 /* Logo.png */; settings = {ASSET_TAGS = (); }; };
 		15EADD511BADE04600B81468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD501BADE04600B81468 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		15EADD531BADEBF600B81468 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD521BADEBF600B81468 /* DataStore.swift */; settings = {ASSET_TAGS = (); }; };
@@ -46,6 +49,9 @@
 		157D99FF1BAE4DD800125D29 /* AddHouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddHouse.png; sourceTree = "<group>"; };
 		157D9A001BAE4DD800125D29 /* AddParty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddParty.png; sourceTree = "<group>"; };
 		157D9A031BAE553F00125D29 /* Join.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Join.png; sourceTree = "<group>"; };
+		157D9A0B1BAE795B00125D29 /* InProgress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InProgress.png; sourceTree = "<group>"; };
+		157D9A0D1BAE79B800125D29 /* Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Active.png; sourceTree = "<group>"; };
+		157D9A0E1BAE79B800125D29 /* Inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Inactive.png; sourceTree = "<group>"; };
 		15B7F47E1BADDD0900212483 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		15EADD501BADE04600B81468 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15EADD521BADEBF600B81468 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 		15B7F47D1BADDCDB00212483 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				157D9A0D1BAE79B800125D29 /* Active.png */,
+				157D9A0E1BAE79B800125D29 /* Inactive.png */,
+				157D9A0B1BAE795B00125D29 /* InProgress.png */,
 				157D9A031BAE553F00125D29 /* Join.png */,
 				157D99FF1BAE4DD800125D29 /* AddHouse.png */,
 				157D9A001BAE4DD800125D29 /* AddParty.png */,
@@ -225,9 +234,12 @@
 			files = (
 				15B7F47F1BADDD0900212483 /* Logo.png in Resources */,
 				157D9A021BAE4DD800125D29 /* AddParty.png in Resources */,
+				157D9A101BAE79B800125D29 /* Inactive.png in Resources */,
 				157705791BADB983007BADDD /* LaunchScreen.storyboard in Resources */,
 				C4509F941BADC5FB0097D374 /* Bars.png in Resources */,
 				157705761BADB983007BADDD /* Assets.xcassets in Resources */,
+				157D9A0F1BAE79B800125D29 /* Active.png in Resources */,
+				157D9A0C1BAE795B00125D29 /* InProgress.png in Resources */,
 				157D9A011BAE4DD800125D29 /* AddHouse.png in Resources */,
 				157D99FE1BAE442300125D29 /* Light Party.png in Resources */,
 				157D9A041BAE553F00125D29 /* Join.png in Resources */,

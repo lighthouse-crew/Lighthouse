@@ -16,6 +16,10 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var dismissButton: UIButton!
+    
+    var welcomeViewController : WelcomeViewController?
+    
     var houseHeaderView : GroupTableHeaderView?
     var partyHeaderView : GroupTableHeaderView?
     
@@ -154,5 +158,22 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 100
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var type : LightGroupType
+        
+        switch (indexPath.section) {
+        case 0:
+            type = .LightHouse
+        default:
+            type = .LightParty
+        }
+
+        let id = groups![type]![indexPath.item]["id"] as! Int
+        
+        welcomeViewController!.setGroupId(id)
+        
+        dismissSidebar(self)
     }
 }
