@@ -963,9 +963,9 @@ Light Party</string>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZPv-T9-hGo">
                                 <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                                 <segments>
-                                    <segment title="inactive"/>
+                                    <segment title="Inactive"/>
                                     <segment title="Searching"/>
-                                    <segment title="Happening"/>
+                                    <segment title="Active"/>
                                 </segments>
                                 <connections>
                                     <action selector="statusPressed:" destination="F4o-Pv-OiD" eventType="primaryActionTriggered" id="uLf-NN-lIB"/>

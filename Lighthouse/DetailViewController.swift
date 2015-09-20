@@ -70,11 +70,11 @@ class DetailViewController : UIViewController, UITableViewDataSource {
             statusSelector.setEnabled(true, forSegmentAtIndex: 0)
             statusSelector.setEnabled(true, forSegmentAtIndex: 1)
             statusSelector.setEnabled(false, forSegmentAtIndex: 2)
-        case .Active:
+        case .Searching:
             statusSelector.setEnabled(true, forSegmentAtIndex: 0)
             statusSelector.setEnabled(true, forSegmentAtIndex: 1)
             statusSelector.setEnabled(true, forSegmentAtIndex: 2)
-        case .InProgress:
+        case .Active:
             statusSelector.setEnabled(true, forSegmentAtIndex: 0)
             statusSelector.setEnabled(false, forSegmentAtIndex: 1)
             statusSelector.setEnabled(true, forSegmentAtIndex: 2)
@@ -151,9 +151,9 @@ class DetailViewController : UIViewController, UITableViewDataSource {
         switch (LightView.stateForInteger(state)) {
         case .Inactive:
             cell!.imageView!.image = UIImage(named: "Inactive")
-        case .Active:
+        case .Searching:
             cell!.imageView!.image = UIImage(named: "Active")
-        case .InProgress:
+        case .Active:
             cell!.imageView!.image = UIImage(named: "InProgress")
         }
         cell!.textLabel!.text = details![indexPath.item]["user_name"] as! String

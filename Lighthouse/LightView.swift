@@ -11,8 +11,8 @@ import Foundation
 
 enum LightViewState {
     case Inactive
+    case Searching
     case Active
-    case InProgress
 }
 
 class LightView : UIView {
@@ -24,9 +24,9 @@ class LightView : UIView {
         case 0:
             return .Inactive
         case 1:
-            return .Active
+            return .Searching
         case 2:
-            return .InProgress
+            return .Active
         default:
             return .Inactive
         }
@@ -57,9 +57,9 @@ class LightView : UIView {
         switch (state) {
         case .Inactive:
             return UIColor.grayColor()
-        case .Active:
+        case .Searching:
             return UIColor.yellowColor()
-        case .InProgress:
+        case .Active:
             return UIColor.greenColor()
         }
     }
