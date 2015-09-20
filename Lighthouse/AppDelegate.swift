@@ -6,6 +6,7 @@
 //  Copyright © 2015 Jiahao Li. All rights reserved.
 //
 
+import Alamofire
 import UIKit
 
 @UIApplicationMain
@@ -13,6 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertView()
+        alert.title = title
+        alert.message = message
+        alert.addButtonWithTitle("OK")
+        alert.show()
+    }
+    
+    func showNetworkErrorAlert() {
+        showAlert("Network Error", message: "Please try again later. ")
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -39,6 +51,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let token = deviceToken.description.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "<>"))
+        let actualToken = token.stringByReplacingOccurrencesOfString(" ", withString: "")
+        
+        NSLog(actualToken)
+        
+        Alamofire.request(.POST, engineURL + "/users/" + String(DataStore.sharedStore.user_id!) + "/submit_token", parameters: [
+            "token": DataStore.sharedStore.token!,
+            "device_token": actualToken
+        ]).responseJSON { (_, _, result) -> Void in
+            if (!result.isSuccess) {
+                self.showNetworkErrorAlert()
+            } else {
+                let value = result.value!
+                
+                if (value["success"] as! Int != 1) {
+                    self.showAlert("Error", message: "Error subscribing for push notifications. ")
+                }
+            }
+        }
     }
 
 

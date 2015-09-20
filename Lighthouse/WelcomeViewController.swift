@@ -24,6 +24,11 @@ class WelcomeViewController : UIViewController {
         self.presentViewController(sidebarViewController, animated: false, completion: nil)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil))
+        UIApplication.sharedApplication().registerForRemoteNotifications()
+    }
+    
     func showAlert(title: String, message: String) {
         let alert = UIAlertView()
         alert.title = title
