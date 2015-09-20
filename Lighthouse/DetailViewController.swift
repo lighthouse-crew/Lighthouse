@@ -15,10 +15,18 @@ class DetailViewController : UIViewController, UITableViewDataSource {
     @IBOutlet weak var detailTitle: UINavigationItem!
     @IBOutlet weak var statusSelector: UISegmentedControl!
     @IBOutlet weak var detailsTableView: UITableView!
+    @IBOutlet weak var statusImage: UIImageView!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
     var group_id : Int?;
     
     var details : [[String : AnyObject]]?
+    
+    var STATUS_IMAGES = [
+        UIImage(named: "grayLogo.png"),
+        UIImage(named: "yellowLogo.png"),
+        UIImage(named: "greenLogo.png")]
     
     override func viewDidLoad() {
         detailsTableView.dataSource = self
@@ -50,8 +58,10 @@ class DetailViewController : UIViewController, UITableViewDataSource {
                         self.detailTitle.title = value["name"] as! String
                         self.details = value["members"] as! [[String: AnyObject]]
                         self.detailsTableView.reloadData()
-                        self.prepareStateButtons(LightView.stateForInteger(self.details![0]["state"] as! Int))
-                        self.statusSelector.selectedSegmentIndex = self.details![0]["state"] as! Int
+                        let myState = self.details![0]["state"] as! Int
+                        self.prepareStateButtons(LightView.stateForInteger(myState))
+                        self.statusSelector.selectedSegmentIndex = myState
+                        self.statusImage.image = self.STATUS_IMAGES[myState]
                     } else {
                         self.showAlert("Error", message: "Error reloading light house/light party details. ")
                     }
@@ -61,6 +71,7 @@ class DetailViewController : UIViewController, UITableViewDataSource {
     
     func setGroupId(id: Int?) {
         group_id = id
+        //userLabel.text = "Hi" //DataStore.sharedStore.name!
         retrieveDetails()
     }
     
@@ -103,10 +114,11 @@ class DetailViewController : UIViewController, UITableViewDataSource {
         }
     }
     
+    @IBAction func backButtonPressed(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
     
     @IBAction func statusPressed(sender: UISegmentedControl) {
-        
-        NSLog("Here")
         switch sender.selectedSegmentIndex {
         case 0,2:
             updateLight(sender.selectedSegmentIndex)
