@@ -226,17 +226,7 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
         }
     }
     
-    func updateLight(state : LightViewState) {
-        var status : Int
-        
-        switch (state) {
-        case .Inactive:
-            status = 0
-        case .Active:
-            status = 1
-        case .InProgress:
-            status = 2
-        }
+    func updateLight(status: Int, label:String = "") {
         
         inactiveButton.enabled = false
         activeButton.enabled = false
@@ -244,6 +234,7 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
         
         Alamofire.request(.POST, engineURL + "/light_groups/" + String(group_id!) + "/update_light", parameters: [
             "state": status,
+            "label": label,
             "token": DataStore.sharedStore.token!
         ]).responseJSON { (_, _, result) -> Void in
             if (!result.isSuccess) {
@@ -254,7 +245,7 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
                 if (value["success"] as! Int == 1) {
                     self.showAlert("Success", message: "You've successfully changed your light status. ")
                     self.retrieveDetails()
-                    self.prepareStateButtons(state)
+                    self.prepareStateButtons(LightView.stateForInteger(status))
                 } else {
                     self.showAlert("Error", message: "Error changing light status. ")
                 }
@@ -262,16 +253,33 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
         }
     }
     
+
+    
+    
     @IBAction func inactivePressed(sender: AnyObject) {
-        updateLight(.Inactive)
+        updateLight(0)
     }
     
     @IBAction func activePressed(sender: AnyObject) {
-        updateLight(.Active)
+        //do the alert, in callback function update the light.
+        let alertController = UIAlertController(title: "Set Label", message: "Label your activity." , preferredStyle: .Alert)
+        
+        let setLabelAction = UIAlertAction(title: "Set Label", style: .Default) { (_) -> Void in
+            let label = alertController.textFields![0]
+            self.updateLight(1, label: label.text!)
+        }
+        
+        alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Label"
+        }
+        
+        alertController.addAction(setLabelAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     @IBAction func inProgressPressed(sender: AnyObject) {
-        updateLight(.InProgress)
+        updateLight(2)
     }
     
     // Data source

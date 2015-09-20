@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		150FDC7E1BAE23A0007CA639 /* GroupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC7D1BAE23A0007CA639 /* GroupTableCell.swift */; settings = {ASSET_TAGS = (); }; };
-		150FDC831BAE2F7A007CA639 /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC821BAE2F7A007CA639 /* LightView.swift */; settings = {ASSET_TAGS = (); }; };
-		150FDC861BAE3209007CA639 /* GroupTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC851BAE3209007CA639 /* GroupTableHeaderView.swift */; settings = {ASSET_TAGS = (); }; };
-		150FDC881BAE35E4007CA639 /* Light House.png in Resources */ = {isa = PBXBuildFile; fileRef = 150FDC871BAE35E4007CA639 /* Light House.png */; settings = {ASSET_TAGS = (); }; };
+		150FDC7E1BAE23A0007CA639 /* GroupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC7D1BAE23A0007CA639 /* GroupTableCell.swift */; };
+		150FDC831BAE2F7A007CA639 /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC821BAE2F7A007CA639 /* LightView.swift */; };
+		150FDC861BAE3209007CA639 /* GroupTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC851BAE3209007CA639 /* GroupTableHeaderView.swift */; };
+		150FDC881BAE35E4007CA639 /* Light House.png in Resources */ = {isa = PBXBuildFile; fileRef = 150FDC871BAE35E4007CA639 /* Light House.png */; };
 		1577056F1BADB983007BADDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1577056E1BADB983007BADDD /* AppDelegate.swift */; };
 		157705711BADB983007BADDD /* SigninSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157705701BADB983007BADDD /* SigninSignupViewController.swift */; };
 		157705741BADB983007BADDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157705721BADB983007BADDD /* Main.storyboard */; };
 		157705761BADB983007BADDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 157705751BADB983007BADDD /* Assets.xcassets */; };
 		157705791BADB983007BADDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157705771BADB983007BADDD /* LaunchScreen.storyboard */; };
-		157D99FE1BAE442300125D29 /* Light Party.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D99FD1BAE442300125D29 /* Light Party.png */; settings = {ASSET_TAGS = (); }; };
-		157D9A011BAE4DD800125D29 /* AddHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D99FF1BAE4DD800125D29 /* AddHouse.png */; settings = {ASSET_TAGS = (); }; };
-		157D9A021BAE4DD800125D29 /* AddParty.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A001BAE4DD800125D29 /* AddParty.png */; settings = {ASSET_TAGS = (); }; };
-		157D9A041BAE553F00125D29 /* Join.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A031BAE553F00125D29 /* Join.png */; settings = {ASSET_TAGS = (); }; };
-		157D9A0C1BAE795B00125D29 /* InProgress.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0B1BAE795B00125D29 /* InProgress.png */; settings = {ASSET_TAGS = (); }; };
-		157D9A0F1BAE79B800125D29 /* Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0D1BAE79B800125D29 /* Active.png */; settings = {ASSET_TAGS = (); }; };
-		157D9A101BAE79B800125D29 /* Inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0E1BAE79B800125D29 /* Inactive.png */; settings = {ASSET_TAGS = (); }; };
-		15B7F47F1BADDD0900212483 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B7F47E1BADDD0900212483 /* Logo.png */; settings = {ASSET_TAGS = (); }; };
-		15EADD511BADE04600B81468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD501BADE04600B81468 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
-		15EADD531BADEBF600B81468 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD521BADEBF600B81468 /* DataStore.swift */; settings = {ASSET_TAGS = (); }; };
-		15EADD551BADF0CE00B81468 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD541BADF0CE00B81468 /* WelcomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		15EADD5A1BADF61E00B81468 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD591BADF61E00B81468 /* SidebarViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		157D99FE1BAE442300125D29 /* Light Party.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D99FD1BAE442300125D29 /* Light Party.png */; };
+		157D9A011BAE4DD800125D29 /* AddHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D99FF1BAE4DD800125D29 /* AddHouse.png */; };
+		157D9A021BAE4DD800125D29 /* AddParty.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A001BAE4DD800125D29 /* AddParty.png */; };
+		157D9A041BAE553F00125D29 /* Join.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A031BAE553F00125D29 /* Join.png */; };
+		157D9A0C1BAE795B00125D29 /* InProgress.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0B1BAE795B00125D29 /* InProgress.png */; };
+		157D9A0F1BAE79B800125D29 /* Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0D1BAE79B800125D29 /* Active.png */; };
+		157D9A101BAE79B800125D29 /* Inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 157D9A0E1BAE79B800125D29 /* Inactive.png */; };
+		15B7F47F1BADDD0900212483 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B7F47E1BADDD0900212483 /* Logo.png */; };
+		15EADD511BADE04600B81468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD501BADE04600B81468 /* Constants.swift */; };
+		15EADD531BADEBF600B81468 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD521BADEBF600B81468 /* DataStore.swift */; };
+		15EADD551BADF0CE00B81468 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD541BADF0CE00B81468 /* WelcomeViewController.swift */; };
+		15EADD5A1BADF61E00B81468 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD591BADF61E00B81468 /* SidebarViewController.swift */; };
 		32EAF92BA2D8BB7E3D1D331C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113A7396B6CC1EDFD7564BA1 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C4509F941BADC5FB0097D374 /* Bars.png in Resources */ = {isa = PBXBuildFile; fileRef = C4509F931BADC5FB0097D374 /* Bars.png */; settings = {ASSET_TAGS = (); }; };
+		C4509F941BADC5FB0097D374 /* Bars.png in Resources */ = {isa = PBXBuildFile; fileRef = C4509F931BADC5FB0097D374 /* Bars.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +200,7 @@
 		157705631BADB983007BADDD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jiahao Li";
 				TargetAttributes = {
