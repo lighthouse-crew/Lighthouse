@@ -128,6 +128,7 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
         }
         
         alertController.addAction(addAction)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
@@ -153,6 +154,7 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
         }
         
         alertController.addAction(joinAction)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
