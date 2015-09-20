@@ -30,6 +30,10 @@
 		15EADD5A1BADF61E00B81468 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADD591BADF61E00B81468 /* SidebarViewController.swift */; };
 		32EAF92BA2D8BB7E3D1D331C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113A7396B6CC1EDFD7564BA1 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C4509F941BADC5FB0097D374 /* Bars.png in Resources */ = {isa = PBXBuildFile; fileRef = C4509F931BADC5FB0097D374 /* Bars.png */; };
+		C4BF0A291BAEB1FB0033EFE7 /* grayLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BF0A251BAEB1FB0033EFE7 /* grayLogo.png */; };
+		C4BF0A2A1BAEB1FB0033EFE7 /* greenLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BF0A261BAEB1FB0033EFE7 /* greenLogo.png */; };
+		C4BF0A2B1BAEB1FB0033EFE7 /* LogoplusText.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BF0A271BAEB1FB0033EFE7 /* LogoplusText.png */; };
+		C4BF0A2C1BAEB1FB0033EFE7 /* yellowLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C4BF0A281BAEB1FB0033EFE7 /* yellowLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		15EADD591BADF61E00B81468 /* SidebarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
 		9E1C105476D2ECA8A1C9B0A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C4509F931BADC5FB0097D374 /* Bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bars.png; sourceTree = "<group>"; };
+		C4BF0A251BAEB1FB0033EFE7 /* grayLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayLogo.png; sourceTree = "<group>"; };
+		C4BF0A261BAEB1FB0033EFE7 /* greenLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenLogo.png; sourceTree = "<group>"; };
+		C4BF0A271BAEB1FB0033EFE7 /* LogoplusText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoplusText.png; sourceTree = "<group>"; };
+		C4BF0A281BAEB1FB0033EFE7 /* yellowLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowLogo.png; sourceTree = "<group>"; };
 		E598F1E1EF273A98FA895508 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +115,10 @@
 		15B7F47D1BADDCDB00212483 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4BF0A251BAEB1FB0033EFE7 /* grayLogo.png */,
+				C4BF0A261BAEB1FB0033EFE7 /* greenLogo.png */,
+				C4BF0A271BAEB1FB0033EFE7 /* LogoplusText.png */,
+				C4BF0A281BAEB1FB0033EFE7 /* yellowLogo.png */,
 				157D9A0D1BAE79B800125D29 /* Active.png */,
 				157D9A0E1BAE79B800125D29 /* Inactive.png */,
 				157D9A0B1BAE795B00125D29 /* InProgress.png */,
@@ -233,7 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BF0A2A1BAEB1FB0033EFE7 /* greenLogo.png in Resources */,
 				15B7F47F1BADDD0900212483 /* Logo.png in Resources */,
+				C4BF0A291BAEB1FB0033EFE7 /* grayLogo.png in Resources */,
 				157D9A021BAE4DD800125D29 /* AddParty.png in Resources */,
 				157D9A101BAE79B800125D29 /* Inactive.png in Resources */,
 				157705791BADB983007BADDD /* LaunchScreen.storyboard in Resources */,
@@ -244,6 +258,8 @@
 				157D9A011BAE4DD800125D29 /* AddHouse.png in Resources */,
 				157D99FE1BAE442300125D29 /* Light Party.png in Resources */,
 				157D9A041BAE553F00125D29 /* Join.png in Resources */,
+				C4BF0A2C1BAEB1FB0033EFE7 /* yellowLogo.png in Resources */,
+				C4BF0A2B1BAEB1FB0033EFE7 /* LogoplusText.png in Resources */,
 				150FDC881BAE35E4007CA639 /* Light House.png in Resources */,
 				157705741BADB983007BADDD /* Main.storyboard in Resources */,
 			);
