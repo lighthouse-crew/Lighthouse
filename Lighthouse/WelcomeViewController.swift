@@ -154,6 +154,7 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
         }
         
         alertController.addAction(setLabelAction)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
