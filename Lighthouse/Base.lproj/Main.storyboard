@@ -66,7 +66,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RCM-2H-Rx8"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-B0-jNO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoplusText.png" translatesAutoresizingMaskIntoConstraints="NO" id="8XR-B0-jNO">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <constraints>
@@ -1171,7 +1171,6 @@ Light Party</string>
         <image name="AddParty.png" width="514" height="514"/>
         <image name="Bars.png" width="32" height="32"/>
         <image name="Join.png" width="512" height="512"/>
-        <image name="Logo.png" width="1024" height="1024"/>
         <image name="LogoplusText.png" width="1024" height="1024"/>
     </resources>
 </document>
