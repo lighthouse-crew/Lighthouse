@@ -22,8 +22,6 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var dismissButton: UIButton!
     
-    var welcomeViewController : WelcomeViewController?
-    
     var houseHeaderView : GroupTableHeaderView?
     var partyHeaderView : GroupTableHeaderView?
     
@@ -152,7 +150,6 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
         alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
             textField.placeholder = "Name"
         }
-        
         alertController.addAction(joinAction)
         alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
         
@@ -294,8 +291,10 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
 
         let id = groups![type]![indexPath.item]["id"] as! Int
         
-        welcomeViewController!.setGroupId(id)
-        
-        dismissSidebar(self)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("detail") as! DetailViewController
+        controller.setGroupId(id)
+        self.presentViewController(controller, animated: true, completion: nil)
+        //dismissSidebar(self)
     }
 }
