@@ -267,12 +267,99 @@
                                     <action selector="showSidebar:" destination="yLW-LT-hvE" eventType="touchUpInside" id="GSH-H8-CDv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATC-Ej-rby">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="0Hn-IW-I6p"/>
+                                    <constraint firstAttribute="height" constant="30" id="BEG-n5-mdc"/>
+                                    <constraint firstAttribute="width" constant="53" id="EjH-kE-ky3"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="egU-iL-f5v"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="kNX-JU-gXn"/>
+                                </constraints>
+                                <state key="normal" image="AddHouse.png"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Hn-IW-I6p"/>
+                                        <exclude reference="BEG-n5-mdc"/>
+                                        <exclude reference="EjH-kE-ky3"/>
+                                        <exclude reference="egU-iL-f5v"/>
+                                        <exclude reference="kNX-JU-gXn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0Hn-IW-I6p"/>
+                                        <include reference="BEG-n5-mdc"/>
+                                        <exclude reference="EjH-kE-ky3"/>
+                                        <include reference="egU-iL-f5v"/>
+                                        <exclude reference="kNX-JU-gXn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="addHousePressed:" destination="yLW-LT-hvE" eventType="touchUpInside" id="5KT-95-G8N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVf-hB-anj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="I6r-8J-G6x"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="Sya-q0-iO1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="TT2-kN-SkE"/>
+                                    <constraint firstAttribute="width" constant="53" id="YZj-88-OB0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="fvf-6N-5Pv"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="lXe-G7-urV"/>
+                                    <constraint firstAttribute="width" constant="30" id="okV-Q1-cRv"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="rgQ-in-izt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="wAM-mg-fWZ"/>
+                                </constraints>
+                                <state key="normal" image="AddParty.png"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I6r-8J-G6x"/>
+                                        <exclude reference="Sya-q0-iO1"/>
+                                        <exclude reference="TT2-kN-SkE"/>
+                                        <exclude reference="YZj-88-OB0"/>
+                                        <exclude reference="fvf-6N-5Pv"/>
+                                        <exclude reference="lXe-G7-urV"/>
+                                        <exclude reference="okV-Q1-cRv"/>
+                                        <exclude reference="rgQ-in-izt"/>
+                                        <exclude reference="wAM-mg-fWZ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="I6r-8J-G6x"/>
+                                        <include reference="Sya-q0-iO1"/>
+                                        <exclude reference="TT2-kN-SkE"/>
+                                        <exclude reference="YZj-88-OB0"/>
+                                        <include reference="fvf-6N-5Pv"/>
+                                        <include reference="lXe-G7-urV"/>
+                                        <include reference="okV-Q1-cRv"/>
+                                        <include reference="rgQ-in-izt"/>
+                                        <include reference="wAM-mg-fWZ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="addPartyPressed:" destination="yLW-LT-hvE" eventType="touchUpInside" id="NZ1-XU-It1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ATC-Ej-rby" firstAttribute="trailing" secondItem="CgW-WO-KsB" secondAttribute="trailingMargin" id="20q-L6-HY4"/>
+                            <constraint firstItem="ATC-Ej-rby" firstAttribute="leading" secondItem="TVf-hB-anj" secondAttribute="trailing" constant="18" id="2X4-6g-bCz"/>
                             <constraint firstItem="CUY-pf-2Jt" firstAttribute="top" secondItem="IAw-dD-Ovl" secondAttribute="bottom" id="5H8-jb-VSK"/>
                             <constraint firstItem="CUY-pf-2Jt" firstAttribute="leading" secondItem="CgW-WO-KsB" secondAttribute="leadingMargin" id="E9I-mZ-Pfk"/>
+                            <constraint firstItem="ATC-Ej-rby" firstAttribute="top" secondItem="IAw-dD-Ovl" secondAttribute="bottom" constant="8" id="GyZ-VR-Kz8"/>
                             <constraint firstItem="CUY-pf-2Jt" firstAttribute="top" secondItem="IAw-dD-Ovl" secondAttribute="bottom" id="NXZ-ya-qT3"/>
                             <constraint firstItem="CUY-pf-2Jt" firstAttribute="top" secondItem="IAw-dD-Ovl" secondAttribute="bottom" constant="8" id="Tgc-c8-nRq"/>
                             <constraint firstItem="CUY-pf-2Jt" firstAttribute="leading" secondItem="CgW-WO-KsB" secondAttribute="leadingMargin" id="Usf-Mj-R8h"/>
@@ -282,11 +369,15 @@
                             <constraint firstItem="wJg-KP-GEe" firstAttribute="centerY" secondItem="NPo-g8-y3j" secondAttribute="top" multiplier="0.5" id="sT0-9B-TZN">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="TVf-hB-anj" firstAttribute="top" secondItem="IAw-dD-Ovl" secondAttribute="bottom" constant="8" id="tfM-Nj-uZn"/>
+                            <constraint firstItem="ATC-Ej-rby" firstAttribute="leading" secondItem="TVf-hB-anj" secondAttribute="trailing" constant="18" id="yP3-Vi-sob"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="wJg-KP-GEe"/>
                                 <exclude reference="CUY-pf-2Jt"/>
+                                <exclude reference="ATC-Ej-rby"/>
+                                <exclude reference="TVf-hB-anj"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5H8-jb-VSK"/>
@@ -298,12 +389,19 @@
                                 <exclude reference="iBF-l5-dHP"/>
                                 <exclude reference="nPe-VG-Y1u"/>
                                 <exclude reference="sT0-9B-TZN"/>
+                                <exclude reference="tfM-Nj-uZn"/>
+                                <exclude reference="20q-L6-HY4"/>
+                                <exclude reference="2X4-6g-bCz"/>
+                                <exclude reference="GyZ-VR-Kz8"/>
+                                <exclude reference="yP3-Vi-sob"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="wJg-KP-GEe"/>
                                 <include reference="CUY-pf-2Jt"/>
+                                <include reference="ATC-Ej-rby"/>
+                                <include reference="TVf-hB-anj"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5H8-jb-VSK"/>
@@ -315,9 +413,18 @@
                                 <include reference="iBF-l5-dHP"/>
                                 <include reference="nPe-VG-Y1u"/>
                                 <include reference="sT0-9B-TZN"/>
+                                <include reference="tfM-Nj-uZn"/>
+                                <include reference="20q-L6-HY4"/>
+                                <include reference="2X4-6g-bCz"/>
+                                <include reference="GyZ-VR-Kz8"/>
+                                <include reference="yP3-Vi-sob"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="addHouseButton" destination="ATC-Ej-rby" id="IPB-YJ-rYp"/>
+                        <outlet property="addPartyButton" destination="TVf-hB-anj" id="dIC-uZ-vuk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9W-5f-Qo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -512,6 +619,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AddHouse.png" width="515" height="531"/>
+        <image name="AddParty.png" width="514" height="514"/>
         <image name="Bars.png" width="32" height="32"/>
         <image name="Logo.png" width="1024" height="1024"/>
     </resources>
