@@ -983,25 +983,6 @@ Light Party</string>
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lighthouse status:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovn-6A-mlp">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="zAi-UO-Nav"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="zAi-UO-Nav"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="zAi-UO-Nav"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update your status by selecting an option below" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEp-79-dLh">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -1026,9 +1007,10 @@ Light Party</string>
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mitchell Gu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOb-vc-7wO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lighthouse Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOb-vc-7wO">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="bJR-8u-6GT"/>
                                     <constraint firstAttribute="height" constant="21" id="h4d-1B-kyE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
@@ -1036,11 +1018,13 @@ Light Party</string>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="bJR-8u-6GT"/>
                                         <exclude reference="h4d-1B-kyE"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
+                                        <include reference="bJR-8u-6GT"/>
                                         <include reference="h4d-1B-kyE"/>
                                     </mask>
                                 </variation>
@@ -1049,17 +1033,8 @@ Light Party</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZPv-T9-hGo" firstAttribute="top" secondItem="bEp-79-dLh" secondAttribute="bottom" constant="8" symbolic="YES" id="276-A4-UPB"/>
-                            <constraint firstItem="bEp-79-dLh" firstAttribute="top" secondItem="Ovn-6A-mlp" secondAttribute="bottom" constant="51" id="2vC-5N-H7q">
-                                <variation key="heightClass=regular-widthClass=compact" constant="67"/>
-                            </constraint>
-                            <constraint firstItem="beD-g5-chQ" firstAttribute="leading" secondItem="Ovn-6A-mlp" secondAttribute="trailing" constant="3" id="3dN-Xs-W78">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-45"/>
-                            </constraint>
                             <constraint firstItem="FOb-vc-7wO" firstAttribute="top" secondItem="thO-RP-1bB" secondAttribute="bottom" constant="23" id="4Wf-0u-Yqj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="beD-g5-chQ" secondAttribute="trailing" constant="-51" id="4aZ-bN-wzl"/>
-                            <constraint firstItem="Ovn-6A-mlp" firstAttribute="top" secondItem="thO-RP-1bB" secondAttribute="bottom" constant="74" id="5gl-xt-k3B">
-                                <variation key="heightClass=regular-widthClass=compact" constant="58"/>
-                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="ZPv-T9-hGo" secondAttribute="trailing" constant="-6" id="6Rl-Hs-i9v"/>
                             <constraint firstItem="55l-34-o8V" firstAttribute="bottom" secondItem="uuX-ej-MD6" secondAttribute="top" id="7VT-zU-wJX"/>
                             <constraint firstItem="thO-RP-1bB" firstAttribute="leading" secondItem="A58-03-dYm" secondAttribute="leading" id="8xS-qC-12k"/>
@@ -1068,18 +1043,13 @@ Light Party</string>
                             </constraint>
                             <constraint firstItem="thO-RP-1bB" firstAttribute="top" secondItem="yFY-9s-aNp" secondAttribute="bottom" id="Mbo-W1-6un"/>
                             <constraint firstItem="55l-34-o8V" firstAttribute="top" secondItem="beD-g5-chQ" secondAttribute="bottom" constant="8" symbolic="YES" id="NcG-7M-x8n"/>
+                            <constraint firstItem="FOb-vc-7wO" firstAttribute="leading" secondItem="bEp-79-dLh" secondAttribute="leading" id="TEQ-jy-CjO"/>
                             <constraint firstItem="beD-g5-chQ" firstAttribute="top" secondItem="yFY-9s-aNp" secondAttribute="bottom" constant="32" id="TdJ-do-nYr"/>
                             <constraint firstAttribute="trailing" secondItem="thO-RP-1bB" secondAttribute="trailing" id="a9z-Pe-3hV"/>
-                            <constraint firstItem="Ovn-6A-mlp" firstAttribute="leading" secondItem="A58-03-dYm" secondAttribute="leadingMargin" id="d93-HJ-63e"/>
-                            <constraint firstItem="FOb-vc-7wO" firstAttribute="trailing" secondItem="Ovn-6A-mlp" secondAttribute="trailing" id="g4y-B2-CwA">
-                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
-                            </constraint>
                             <constraint firstItem="55l-34-o8V" firstAttribute="leading" secondItem="thO-RP-1bB" secondAttribute="leading" id="o8h-LL-Kmg"/>
                             <constraint firstItem="55l-34-o8V" firstAttribute="trailing" secondItem="thO-RP-1bB" secondAttribute="trailing" id="qbN-yD-kEh"/>
                             <constraint firstItem="bEp-79-dLh" firstAttribute="leading" secondItem="ZPv-T9-hGo" secondAttribute="leading" id="ur2-qu-Kh7"/>
                             <constraint firstItem="55l-34-o8V" firstAttribute="top" secondItem="ZPv-T9-hGo" secondAttribute="bottom" constant="8" symbolic="YES" id="wZn-OA-fTN"/>
-                            <constraint firstItem="FOb-vc-7wO" firstAttribute="leading" secondItem="Ovn-6A-mlp" secondAttribute="leading" id="xXj-Rc-mon"/>
-                            <constraint firstItem="bEp-79-dLh" firstAttribute="leading" secondItem="Ovn-6A-mlp" secondAttribute="leading" id="zQK-tZ-dPa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -1087,7 +1057,6 @@ Light Party</string>
                                 <exclude reference="thO-RP-1bB"/>
                                 <exclude reference="ZPv-T9-hGo"/>
                                 <exclude reference="beD-g5-chQ"/>
-                                <exclude reference="Ovn-6A-mlp"/>
                                 <exclude reference="bEp-79-dLh"/>
                                 <exclude reference="FOb-vc-7wO"/>
                             </mask>
@@ -1096,17 +1065,11 @@ Light Party</string>
                                 <exclude reference="Mbo-W1-6un"/>
                                 <exclude reference="a9z-Pe-3hV"/>
                                 <exclude reference="4Wf-0u-Yqj"/>
-                                <exclude reference="g4y-B2-CwA"/>
-                                <exclude reference="xXj-Rc-mon"/>
-                                <exclude reference="5gl-xt-k3B"/>
-                                <exclude reference="d93-HJ-63e"/>
-                                <exclude reference="3dN-Xs-W78"/>
+                                <exclude reference="TEQ-jy-CjO"/>
                                 <exclude reference="4aZ-bN-wzl"/>
                                 <exclude reference="K12-Ho-j8X"/>
                                 <exclude reference="TdJ-do-nYr"/>
-                                <exclude reference="2vC-5N-H7q"/>
                                 <exclude reference="ur2-qu-Kh7"/>
-                                <exclude reference="zQK-tZ-dPa"/>
                                 <exclude reference="276-A4-UPB"/>
                                 <exclude reference="6Rl-Hs-i9v"/>
                                 <exclude reference="7VT-zU-wJX"/>
@@ -1122,7 +1085,6 @@ Light Party</string>
                                 <include reference="thO-RP-1bB"/>
                                 <include reference="ZPv-T9-hGo"/>
                                 <include reference="beD-g5-chQ"/>
-                                <include reference="Ovn-6A-mlp"/>
                                 <include reference="bEp-79-dLh"/>
                                 <include reference="FOb-vc-7wO"/>
                             </mask>
@@ -1131,17 +1093,11 @@ Light Party</string>
                                 <include reference="Mbo-W1-6un"/>
                                 <include reference="a9z-Pe-3hV"/>
                                 <include reference="4Wf-0u-Yqj"/>
-                                <include reference="g4y-B2-CwA"/>
-                                <include reference="xXj-Rc-mon"/>
-                                <include reference="5gl-xt-k3B"/>
-                                <include reference="d93-HJ-63e"/>
-                                <include reference="3dN-Xs-W78"/>
+                                <include reference="TEQ-jy-CjO"/>
                                 <include reference="4aZ-bN-wzl"/>
                                 <include reference="K12-Ho-j8X"/>
                                 <include reference="TdJ-do-nYr"/>
-                                <include reference="2vC-5N-H7q"/>
                                 <include reference="ur2-qu-Kh7"/>
-                                <include reference="zQK-tZ-dPa"/>
                                 <include reference="276-A4-UPB"/>
                                 <include reference="6Rl-Hs-i9v"/>
                                 <include reference="7VT-zU-wJX"/>
