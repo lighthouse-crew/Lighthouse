@@ -12,6 +12,7 @@ class DataStore {
     static let sharedStore = DataStore()
     
     let tokenDefaultsKey = "token"
+    let nameDefaultsKey = "name"
     
     var token : String? {
         get {
@@ -23,6 +24,19 @@ class DataStore {
         set {
             let defaults = NSUserDefaults.standardUserDefaults()
             defaults.setObject(newValue, forKey: tokenDefaultsKey)
+        }
+    }
+    
+    var name : String? {
+        get {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let token = defaults.objectForKey(nameDefaultsKey)
+            return (token == nil ? nil : (token as! String))
+        }
+        
+        set {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setObject(newValue, forKey: nameDefaultsKey)
         }
     }
 }

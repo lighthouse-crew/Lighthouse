@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		150FDC7E1BAE23A0007CA639 /* GroupTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC7D1BAE23A0007CA639 /* GroupTableCell.swift */; settings = {ASSET_TAGS = (); }; };
 		150FDC831BAE2F7A007CA639 /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC821BAE2F7A007CA639 /* LightView.swift */; settings = {ASSET_TAGS = (); }; };
+		150FDC861BAE3209007CA639 /* GroupTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FDC851BAE3209007CA639 /* GroupTableHeaderView.swift */; settings = {ASSET_TAGS = (); }; };
+		150FDC881BAE35E4007CA639 /* Light House.png in Resources */ = {isa = PBXBuildFile; fileRef = 150FDC871BAE35E4007CA639 /* Light House.png */; settings = {ASSET_TAGS = (); }; };
+		150FDC8A1BAE361A007CA639 /* Light Party.png in Resources */ = {isa = PBXBuildFile; fileRef = 150FDC891BAE361A007CA639 /* Light Party.png */; settings = {ASSET_TAGS = (); }; };
 		1577056F1BADB983007BADDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1577056E1BADB983007BADDD /* AppDelegate.swift */; };
 		157705711BADB983007BADDD /* SigninSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157705701BADB983007BADDD /* SigninSignupViewController.swift */; };
 		157705741BADB983007BADDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 157705721BADB983007BADDD /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 		113A7396B6CC1EDFD7564BA1 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		150FDC7D1BAE23A0007CA639 /* GroupTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableCell.swift; sourceTree = "<group>"; };
 		150FDC821BAE2F7A007CA639 /* LightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
+		150FDC851BAE3209007CA639 /* GroupTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableHeaderView.swift; sourceTree = "<group>"; };
+		150FDC871BAE35E4007CA639 /* Light House.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Light House.png"; sourceTree = "<group>"; };
+		150FDC891BAE361A007CA639 /* Light Party.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Light Party.png"; sourceTree = "<group>"; };
 		1577056B1BADB983007BADDD /* Lighthouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lighthouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1577056E1BADB983007BADDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		157705701BADB983007BADDD /* SigninSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninSignupViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 		15B7F47D1BADDCDB00212483 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				150FDC891BAE361A007CA639 /* Light Party.png */,
+				150FDC871BAE35E4007CA639 /* Light House.png */,
 				C4509F931BADC5FB0097D374 /* Bars.png */,
 				15B7F47E1BADDD0900212483 /* Logo.png */,
 			);
@@ -106,6 +114,7 @@
 				15EADD591BADF61E00B81468 /* SidebarViewController.swift */,
 				150FDC7D1BAE23A0007CA639 /* GroupTableCell.swift */,
 				150FDC821BAE2F7A007CA639 /* LightView.swift */,
+				150FDC851BAE3209007CA639 /* GroupTableHeaderView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -209,6 +218,8 @@
 				157705791BADB983007BADDD /* LaunchScreen.storyboard in Resources */,
 				C4509F941BADC5FB0097D374 /* Bars.png in Resources */,
 				157705761BADB983007BADDD /* Assets.xcassets in Resources */,
+				150FDC8A1BAE361A007CA639 /* Light Party.png in Resources */,
+				150FDC881BAE35E4007CA639 /* Light House.png in Resources */,
 				157705741BADB983007BADDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				157705711BADB983007BADDD /* SigninSignupViewController.swift in Sources */,
+				150FDC861BAE3209007CA639 /* GroupTableHeaderView.swift in Sources */,
 				150FDC7E1BAE23A0007CA639 /* GroupTableCell.swift in Sources */,
 				15EADD5A1BADF61E00B81468 /* SidebarViewController.swift in Sources */,
 				15EADD551BADF0CE00B81468 /* WelcomeViewController.swift in Sources */,

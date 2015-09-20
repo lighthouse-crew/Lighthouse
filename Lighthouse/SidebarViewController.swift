@@ -13,9 +13,16 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var groupsTableView: UITableView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var houseHeaderView : GroupTableHeaderView?
+    var partyHeaderView : GroupTableHeaderView?
+    
     override func viewDidLoad() {
         groupsTableView.delegate = self
         groupsTableView.dataSource = self
+        
+        nameLabel.text = DataStore.sharedStore.name!
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -37,6 +44,10 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
     // UITableViewDelegate
     
     // UITableViewDataSource
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -60,5 +71,30 @@ class SidebarViewController : UIViewController, UITableViewDelegate, UITableView
         }
         
         return groupCell
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if (houseHeaderView == nil) {
+            houseHeaderView = GroupTableHeaderView()
+            houseHeaderView!.type = .LightHouse
+        }
+        
+        if (partyHeaderView == nil) {
+            partyHeaderView = GroupTableHeaderView()
+            partyHeaderView!.type = .LightParty
+        }
+        
+        switch (section) {
+        case 0:
+            return houseHeaderView
+        case 1:
+            return partyHeaderView
+        default:
+            return houseHeaderView
+        }
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
     }
 }
