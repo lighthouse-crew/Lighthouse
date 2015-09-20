@@ -299,7 +299,7 @@ class WelcomeViewController : UIViewController, UITableViewDataSource {
         }
         cell!.textLabel!.text = details![indexPath.item]["user_name"] as! String
         var label = details![indexPath.item]["label"] as? String
-        if (label == `nil) {
+        if (label == nil) {
             label = ""
         }
         cell!.detailTextLabel!.text = label
